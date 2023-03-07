@@ -6,27 +6,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import com.z0o0a.navigationtest.viewmodel.PostOneVM
+import androidx.navigation.fragment.findNavController
+import com.z0o0a.navigationtest.R
 import com.z0o0a.navigationtest.databinding.PostOneBinding
+import com.z0o0a.navigationtest.viewmodel.PostVM
 
 class PostOne : Fragment() {
-
-    private var binding: PostOneBinding? = null
-    private val sharedViewModel: PostOneVM by activityViewModels()
+    private lateinit var binding : PostOneBinding
+    private val vm: PostVM by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val fragmentBinding = PostOneBinding.inflate(inflater, container, false)
-        binding = fragmentBinding
-        return fragmentBinding.root
+        binding = PostOneBinding.inflate(layoutInflater)
+        binding.vm = vm
+        binding.lifecycleOwner = requireActivity()
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         // 할일하기
+        binding.btnGoTwo.setOnClickListener {
+            findNavController().navigate(R.id.postTwo)
+        }
     }
 
 }
