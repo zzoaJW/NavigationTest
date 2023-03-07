@@ -23,7 +23,7 @@
             android:layout_marginTop="100dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text=""
+            android:text="@={vm.person.name}"
             android:hint="Name"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
