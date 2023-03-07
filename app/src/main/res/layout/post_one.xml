@@ -5,7 +5,7 @@
     <data>
         <variable
             name="vm"
-            type="com.z0o0a.navigationtest.viewmodel.PostOneVM" />
+            type="com.z0o0a.navigationtest.viewmodel.PostVM" />
 <!--        <variable-->
 <!--            name="view"-->
 <!--            type="com.z0o0a.navigationtest.view.PostOne" />-->
