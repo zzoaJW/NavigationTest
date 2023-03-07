@@ -8,6 +8,6 @@ class PostOneVM : ViewModel() {
     var person = MutableLiveData<Person>()
 
     init {
-        person.value = Person("", 0)
+        person.value = Person("", "")
     }
 }
