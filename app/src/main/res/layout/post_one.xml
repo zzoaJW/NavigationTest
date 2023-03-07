@@ -3,7 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-
+        <variable
+            name="vm"
+            type="com.z0o0a.navigationtest.viewmodel.PostOneVM" />
+<!--        <variable-->
+<!--            name="view"-->
+<!--            type="com.z0o0a.navigationtest.view.PostOne" />-->
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,7 +23,8 @@
             android:layout_marginTop="100dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text=""
+            android:hint="Name"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

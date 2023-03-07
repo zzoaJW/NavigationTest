@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-
+        <variable
+            name="vm"
+            type="com.z0o0a.navigationtest.viewmodel.PostOneVM" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -11,20 +13,35 @@
         tools:context=".DrinkPostingTitle"
         android:background="@color/white">
 
+        <EditText
+            android:id="@+id/edittext_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:hint="Name"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/btn_go_three"
+            app:layout_constraintStart_toStartOf="@+id/btn_go_three"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name_out1" />
+
         <Button
-            android:id="@+id/btn_finish"
+            android:id="@+id/btn_go_three"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="20dp"
             android:backgroundTint="@color/black"
-            android:text="확인"
+            android:text="다음"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="264dp" />
+            app:layout_constraintTop_toBottomOf="@+id/edittext_age" />
 
         <TextView
-            android:id="@+id/txt_name_out2"
+            android:id="@+id/txt_name_out1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
@@ -35,35 +52,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/txt_age_out2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="TextView"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_name_out2" />
-
-        <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아까 적은 이름 : "
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/txt_name_out2"
-            app:layout_constraintEnd_toStartOf="@+id/txt_name_out2"
-            app:layout_constraintTop_toTopOf="@+id/txt_name_out2" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="아까 적은 나이 : "
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/txt_age_out2"
-            app:layout_constraintEnd_toStartOf="@+id/txt_age_out2"
-            app:layout_constraintTop_toTopOf="@+id/txt_age_out2" />
+            app:layout_constraintBottom_toBottomOf="@+id/txt_name_out1"
+            app:layout_constraintEnd_toStartOf="@+id/txt_name_out1"
+            app:layout_constraintTop_toTopOf="@+id/txt_name_out1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
