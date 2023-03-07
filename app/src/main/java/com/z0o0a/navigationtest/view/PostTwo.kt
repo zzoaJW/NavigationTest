@@ -15,10 +15,7 @@ class PostTwo : Fragment() {
     private lateinit var binding : PostTwoBinding
     private val vm: PostVM by activityViewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = PostTwoBinding.inflate(layoutInflater)
         binding.vm = vm
         binding.lifecycleOwner = requireActivity()

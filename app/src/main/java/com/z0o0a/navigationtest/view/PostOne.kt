@@ -15,10 +15,7 @@ class PostOne : Fragment() {
     private lateinit var binding : PostOneBinding
     private val vm: PostVM by activityViewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = PostOneBinding.inflate(layoutInflater)
         binding.vm = vm
         binding.lifecycleOwner = requireActivity()
