@@ -1,5 +1,6 @@
 package com.z0o0a.navigationtest.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -14,5 +15,10 @@ class NewActivity : AppCompatActivity() {
         binding = NewActivityBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        binding.btnRestart.setOnClickListener {
+            intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
