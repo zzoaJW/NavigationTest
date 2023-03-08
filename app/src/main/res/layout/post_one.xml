@@ -6,14 +6,10 @@
         <variable
             name="vm"
             type="com.z0o0a.navigationtest.viewmodel.PostVM" />
-<!--        <variable-->
-<!--            name="view"-->
-<!--            type="com.z0o0a.navigationtest.view.PostOne" />-->
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DrinkPostingTitle"
         android:background="@color/white">
 
         <EditText
